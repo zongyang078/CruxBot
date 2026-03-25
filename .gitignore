@@ -57,4 +57,4 @@ models/
 *.gguf
 
 # Docker
-docker-compose.override.yml
+docker-compose.override.ymldata/unified/*.json
