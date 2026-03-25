@@ -57,4 +57,9 @@ models/
 *.gguf
 
 # Docker
-docker-compose.override.ymldata/unified/*.json
+docker-compose.override.yml
+
+# Data files (too large for git)
+data/unified/*.json
+data/unified/*.csv
+!data/unified/.gitkeep
