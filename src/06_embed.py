@@ -230,28 +230,5 @@ def main():
     print(f"  Embedding dim: {model.get_sentence_embedding_dimension()}")
     print(f"  Time elapsed: {elapsed:.0f}s ({total_upserted / max(elapsed, 1):.0f} chunks/sec)")
 
-    # Testcase
-    print(f"\n Testcase: 'how to train for V5 bouldering'...")
-    results = collection.query(
-        query_embeddings=model.encode(
-            ["how to train for V5 bouldering"],
-            normalize_embeddings=True,
-        ).tolist(),
-        n_results=3,
-        include=["documents", "metadatas", "distances"],
-    )
-    for i, (doc, meta, dist) in enumerate(zip(
-        results["documents"][0],
-        results["metadatas"][0],
-        results["distances"][0],
-    )):
-        print(f"\n  Result {i+1} (distance={dist:.4f}):")
-        print(f"    Source: {meta.get('source')} | Type: {meta.get('content_type')}")
-        print(f"    URL:    {meta.get('source_url', '')[:80]}")
-        print(f"    Text:   {doc[:200]}...")
-
-    print(f"ChromaDB: {CHROMA_DIR}/  ({final_count:,} vectors)")
-
-
 if __name__ == "__main__":
     main()
