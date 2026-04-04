@@ -14,15 +14,15 @@ Climbing knowledge is scattered across forums, wikis, and databases. CruxBot sol
 
 ## Data Sources
 
-| Source | Content | Entries | Method |
-|--------|---------|---------|--------|
-| [OpenBeta](https://openbeta.io) | Routes, grades, GPS (47 US states) | 85,898 | GraphQL API |
-| [Mountain Project](https://www.kaggle.com/datasets/pdegner/mountain-project-rotues-and-forums) (Kaggle) | Routes with descriptions & URLs | 116,700 | Kaggle download |
-| MP Forums (Kaggle) | Training, gear, technique discussions | 99,173 | Kaggle download |
-| [AAC Articles](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles) (Kaggle) | Accident reports, expedition records | 27,828 | Kaggle download |
-| Reddit | Community discussions (2024–2026) | 2,372 | Public JSON endpoints |
-| Gear Reviews (Kaggle) | Equipment reviews & ratings | 6,462 | Kaggle download |
-| **Total** | | **338,433** | |
+| Source                                                                                                  | Content                               | Entries     | Method                |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------- | --------------------- |
+| [OpenBeta](https://openbeta.io)                                                                         | Routes, grades, GPS (47 US states)    | 85,898      | GraphQL API           |
+| [Mountain Project](https://www.kaggle.com/datasets/pdegner/mountain-project-rotues-and-forums) (Kaggle) | Routes with descriptions & URLs       | 116,700     | Kaggle download       |
+| MP Forums (Kaggle)                                                                                      | Training, gear, technique discussions | 99,173      | Kaggle download       |
+| [AAC Articles](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles) (Kaggle)    | Accident reports, expedition records  | 27,828      | Kaggle download       |
+| Reddit                                                                                                  | Community discussions (2024–2026)     | 2,372       | Public JSON endpoints |
+| Gear Reviews (Kaggle)                                                                                   | Equipment reviews & ratings           | 6,462       | Kaggle download       |
+| **Total**                                                                                               |                                       | **338,433** |                       |
 
 All entries are cleaned, deduplicated, and normalized into a unified schema. 100% have clickable source URLs for citation. See [DATA_COLLECTION_METHODS.md](DATA_COLLECTION_METHODS.md) for full documentation.
 
@@ -122,18 +122,18 @@ Every entry in the knowledge base follows this schema:
 
 ```json
 {
-  "doc_id":       "f83c6348003e",
-  "title":        "Access Denied",
-  "text":         "Access Denied is a 5.10b/c Sport climbing route...",
+  "doc_id": "f83c6348003e",
+  "title": "Access Denied",
+  "text": "Access Denied is a 5.10b/c Sport climbing route...",
   "content_type": "route",
-  "source":       "mountain_project",
-  "source_url":   "https://www.mountainproject.com/route/110149834/access-denied",
-  "grade":        "5.10b/c",
-  "route_type":   "Sport",
-  "location":     "El Mirador > El Potrero Chico > ...",
-  "lat":          "25.95044",
-  "lng":          "-100.47755",
-  "metadata":     {"avg_stars": "2.9", "pitches": "4"}
+  "source": "mountain_project",
+  "source_url": "https://www.mountainproject.com/route/110149834/access-denied",
+  "grade": "5.10b/c",
+  "route_type": "Sport",
+  "location": "El Mirador > El Potrero Chico > ...",
+  "lat": "25.95044",
+  "lng": "-100.47755",
+  "metadata": { "avg_stars": "2.9", "pitches": "4" }
 }
 ```
 
@@ -155,10 +155,29 @@ Every entry in the knowledge base follows this schema:
 ## Team
 
 | Member | Contribution |
-|--------|-------------|
-| TBD | TBD |
+| ------ | ------------ |
+| TBD    | TBD          |
 
 ## License
 
 This project is for educational purposes (CS 6120 Final Project).
 Data sources are used under their respective licenses: OpenBeta (CC0), AAC (CC0), Kaggle (copyright-authors), Reddit (API ToS).
+
+GCP VM
+
+1. VM — Compute Engine GPU T4，Ubuntu 22.04，firewall 8080/8501
+2. install env — Docker + NVIDIA Container Toolkit
+3. upload code & data
+   gcloud compute scp --recurse ./CruxBot <VM name>:~/
+4. pull llama3
+   docker compose up -d ollama
+   docker compose exec ollama ollama pull llama3
+5. start service
+   docker compose up -d
+
+outside VM access：http://<VMIP>:8501
+
+GCP VM
+├── ollama (GPU，locally run llama3) :11434
+├── app (FastAPI) :8080 ← API
+└── streamlit (frontend UI) :8501 ← user access

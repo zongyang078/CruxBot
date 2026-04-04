@@ -1,9 +1,10 @@
 import json
+import os
 import urllib.request
 from src.retrieval import retrieve
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "llama3"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
 
 
 def _build_prompt(query: str, chunks: list[dict]) -> str:
