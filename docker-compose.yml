@@ -21,7 +21,7 @@ services:
       - OLLAMA_URL=http://ollama:11434/api/generate
       - OLLAMA_MODEL=llama3
     volumes:
-      - ./data/chroma:/app/data/chroma:ro
+      - ./data/chroma:/app/data/chroma
     depends_on:
       - ollama
 
@@ -34,7 +34,7 @@ services:
       - OLLAMA_URL=http://ollama:11434/api/generate
       - OLLAMA_MODEL=llama3
     volumes:
-      - ./data/chroma:/app/data/chroma:ro
+      - ./data/chroma:/app/data/chroma
     depends_on:
       - ollama
 

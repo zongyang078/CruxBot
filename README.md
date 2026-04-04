@@ -165,15 +165,7 @@ Data sources are used under their respective licenses: OpenBeta (CC0), AAC (CC0)
 
 GCP VM
 
-1. VM — Compute Engine GPU T4，Ubuntu 22.04，firewall 8080/8501
-2. install env — Docker + NVIDIA Container Toolkit
-3. upload code & data
-   gcloud compute scp --recurse ./CruxBot <VM name>:~/
-4. pull llama3
-   docker compose up -d ollama
-   docker compose exec ollama ollama pull llama3
-5. start service
-   docker compose up -d
+`bash scripts/setup_gcp.sh`
 
 outside VM access：http://<VMIP>:8501
 
