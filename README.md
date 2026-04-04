@@ -144,12 +144,12 @@ Every entry in the knowledge base follows this schema:
 - [x] Data collection (6 sources, 504k raw entries)
 - [x] Data cleaning & deduplication (338k unified entries)
 - [x] Unified schema with 100% citation URLs
-- [ ] Chunking & embedding
-- [ ] ChromaDB indexing
-- [ ] LLM deployment (Ollama + Llama 3)
-- [ ] RAG pipeline
-- [ ] Streamlit frontend
-- [ ] Docker containerization
+- [x] Chunking & embedding
+- [x] ChromaDB indexing
+- [x] LLM deployment (Ollama + Llama 3)
+- [x] RAG pipeline
+- [x] Streamlit frontend
+- [x] Docker containerization
 - [ ] Evaluation & writeup
 
 ## Team
