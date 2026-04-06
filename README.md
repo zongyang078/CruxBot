@@ -163,13 +163,45 @@ Every entry in the knowledge base follows this schema:
 This project is for educational purposes (CS 6120 Final Project).
 Data sources are used under their respective licenses: OpenBeta (CC0), AAC (CC0), Kaggle (copyright-authors), Reddit (API ToS).
 
+## Deployment (GCP)
+
+### Architecture
+
+```
 GCP VM
+├── ollama (GPU, locally runs llama3)  :11434
+├── app (FastAPI)                      :8080  ← API
+└── streamlit (frontend UI)            :8501  ← user access
+```
 
-`bash scripts/setup_gcp.sh`
+### Scripts
 
-outside VM access：http://<VMIP>:8501
+| Script | When to use |
+|--------|-------------|
+| `bash scripts/setup_gcp.sh` | First-time setup — creates VM, installs drivers, uploads ChromaDB (2.8GB), builds Docker images |
+| `bash scripts/start_gcp.sh` | Start the stopped VM and bring up all containers (no code changes) |
+| `bash scripts/update_gcp.sh` | Code updates — starts stopped VM, uploads changed source files, rebuilds and restarts containers |
+| `bash scripts/update_chroma.sh <zip>` | ChromaDB updates — replaces vector store without touching code |
+| `gcloud compute instances stop cruxbot-vm --zone=us-west1-a` | Stop the VM and shut down all containers |
 
-GCP VM
-├── ollama (GPU，locally run llama3) :11434
-├── app (FastAPI) :8080 ← API
-└── streamlit (frontend UI) :8501 ← user access
+### First-time deployment
+
+```bash
+bash scripts/setup_gcp.sh
+```
+
+### Update code only (VM already exists)
+
+```bash
+bash scripts/update_gcp.sh
+```
+
+### Update ChromaDB only
+
+```bash
+bash scripts/update_chroma.sh ~/Downloads/chroma_fixed.zip
+```
+
+Access the app at `http://<VM_IP>:8501` — printed at the end of each script.
+
+> Note: The first Streamlit request after a restart triggers BM25 index build (~30s), cached automatically afterwards.
