@@ -199,16 +199,8 @@ GCP VM (NVIDIA L4 GPU)
 | Sherwin Vahidimowlavi | Chunking pipeline, embedding pipeline, ChromaDB indexing (382k vectors) |
 | Linxuan Li | Retrieval logic, RAG orchestration, Ollama integration, prompt design |
 | Lingyun Xiao | Streamlit frontend, FastAPI backend, GCP deployment, Docker containerization |
-| Zongyang Li | Data collection，hybrid search (BM25+dense+RRF), query intent detection, grade normalization, prompt engineering, anti-hallucination design, evaluation |
+| Zongyang Li | Data collection, hybrid search (BM25+dense+RRF), query intent detection, grade normalization, prompt engineering, anti-hallucination design, evaluation |
 | All | Writeup |
-## Team
-
-| Member | Contribution |
-|--------|-------------|
-| Zongyang Li | Data collection (6 sources, 504k→338k), hybrid retrieval (BM25+dense+RRF), intent detection, grade normalization, prompt engineering, evaluation, writeup |
-| Lingyun Xiao | GCP deployment, Docker containerization, Ollama/LLM infrastructure |
-| Linxuan Li | Chunking pipeline, embedding pipeline, ChromaDB indexing |
-| Sherwin Vahidimowlavi | Streamlit frontend, FastAPI backend |
 
 ## License
 
