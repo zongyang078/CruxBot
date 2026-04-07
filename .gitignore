@@ -64,3 +64,4 @@ data/unified/*.json
 data/unified/*.csv
 !data/unified/.gitkeep
 data/chroma*.zip
+*.sqlite3

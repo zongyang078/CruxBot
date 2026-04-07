@@ -1,11 +1,11 @@
 """
-CruxBot — RAG Pipeline (v2)
+CruxBot — RAG Pipeline (v3)
 =============================
-Improvements over v1:
-  1. Smarter prompt — allows partial answers instead of hard refusal
-  2. Grade context — includes equivalent grades in prompt when relevant
-  3. Source quality indicator — marks generic URLs so LLM can mention it
-  4. Richer context blocks — includes metadata (grade, location, source) per chunk
+Improvements over v2:
+  1. Streaming support — token-by-token output for Streamlit
+  2. Domain-check prompt — rejects non-climbing questions before checking context
+  3. Incidental mention guard — prevents using passing mentions for off-topic answers
+  4. Keeps non-streaming answer() for evaluation script compatibility
 """
 
 import json
@@ -19,12 +19,10 @@ OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
 
 def _build_prompt(query: str, chunks: list[dict]) -> str:
     """
-    Build a prompt with richer context blocks and a more nuanced instruction
-    that reduces over-conservative refusals.
+    Build a prompt with richer context blocks and a more nuanced instruction.
     """
     context_parts = []
     for i, chunk in enumerate(chunks, 1):
-        # Include metadata in context so LLM can reference it
         meta = chunk.get("metadata", {})
         header_parts = []
         if meta.get("content_type"):
@@ -33,7 +31,6 @@ def _build_prompt(query: str, chunks: list[dict]) -> str:
             header_parts.append(f"Grade: {meta['grade']}")
         if meta.get("location"):
             loc = meta["location"]
-            # Truncate very long location strings
             if len(loc) > 80:
                 loc = loc[:80] + "..."
             header_parts.append(f"Location: {loc}")
@@ -53,7 +50,6 @@ def _build_prompt(query: str, chunks: list[dict]) -> str:
 
     context = "\n\n".join(context_parts)
 
-    # Check for grade in query and add equivalents note
     grade_note = ""
     grade = extract_grade_from_query(query)
     if grade:
@@ -91,6 +87,10 @@ def _build_prompt(query: str, chunks: list[dict]) -> str:
     )
 
 
+# ============================================================
+# Non-streaming call (used by evaluate.py)
+# ============================================================
+
 def _call_ollama(prompt: str) -> str:
     payload = json.dumps({
         "model": OLLAMA_MODEL,
@@ -109,31 +109,56 @@ def _call_ollama(prompt: str) -> str:
     return body["response"].strip()
 
 
+# ============================================================
+# Streaming call (used by Streamlit)
+# ============================================================
+
+def _call_ollama_stream(prompt: str):
+    """
+    Generator that yields tokens one by one from Ollama streaming API.
+    """
+    payload = json.dumps({
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "stream": True,
+    }).encode()
+
+    req = urllib.request.Request(
+        OLLAMA_URL,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        for line in resp:
+            if line:
+                try:
+                    chunk = json.loads(line)
+                    token = chunk.get("response", "")
+                    if token:
+                        yield token
+                    if chunk.get("done", False):
+                        break
+                except json.JSONDecodeError:
+                    continue
+
+
+# ============================================================
+# Non-streaming answer (for evaluation script)
+# ============================================================
+
 def answer(query: str, top_k: int = 5, chroma_path: str = "data/chroma") -> dict:
     """
-    Run the full RAG pipeline for a query.
-
-    Returns:
-        {
-            "query": str,
-            "answer": str,
-            "sources": [{"url": str, "text_snippet": str, "is_specific": bool}, ...],
-            "intent": str | None,
-        }
+    Run the full RAG pipeline (non-streaming).
+    Used by evaluate.py and other scripts.
     """
     from src.retrieval import detect_query_intent
 
-    # Detect intent for logging/debugging
     intent = detect_query_intent(query)
-
-    # Retrieve with intent-based filtering
     chunks = retrieve(query, top_k=top_k, chroma_path=chroma_path)
-
-    # Build prompt and call LLM
     prompt = _build_prompt(query, chunks)
     response = _call_ollama(prompt)
 
-    # Build source list with URL quality indicator
     sources = []
     for c in chunks:
         url = c.get("source_url", "")
@@ -147,6 +172,47 @@ def answer(query: str, top_k: int = 5, chroma_path: str = "data/chroma") -> dict
     return {
         "query": query,
         "answer": response,
+        "sources": sources,
+        "intent": intent,
+    }
+
+
+# ============================================================
+# Streaming answer (for Streamlit)
+# ============================================================
+
+def answer_stream(query: str, top_k: int = 5, chroma_path: str = "data/chroma") -> dict:
+    """
+    Run RAG retrieval, return chunks/sources and a token generator.
+    The LLM response is NOT called yet — the generator is lazy.
+
+    Returns:
+        {
+            "query": str,
+            "stream": generator yielding tokens,
+            "sources": [...],
+            "intent": str | None,
+        }
+    """
+    from src.retrieval import detect_query_intent
+
+    intent = detect_query_intent(query)
+    chunks = retrieve(query, top_k=top_k, chroma_path=chroma_path)
+    prompt = _build_prompt(query, chunks)
+
+    sources = []
+    for c in chunks:
+        url = c.get("source_url", "")
+        if url:
+            sources.append({
+                "url": url,
+                "text_snippet": c["text"][:120],
+                "is_specific": c.get("source_url_specific", True),
+            })
+
+    return {
+        "query": query,
+        "stream": _call_ollama_stream(prompt),
         "sources": sources,
         "intent": intent,
     }
