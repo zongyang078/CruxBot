@@ -47,7 +47,7 @@ def highlight_snippet(snippet: str, query: str) -> str:
     # Replace matches with bold markdown, preserving original case
     highlighted = re.sub(
         f"({pattern})",
-        r"**\1**",
+        r"<b>\1</b>",
         snippet,
         flags=re.IGNORECASE,
     )

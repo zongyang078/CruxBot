@@ -64,7 +64,7 @@ def _build_prompt(query: str, chunks: list[dict]) -> str:
         "You are CruxBot, an expert rock climbing assistant.\n\n"
         "INSTRUCTIONS:\n"
         "- FIRST, determine if the question is about rock climbing (routes, training, "
-        "gear, safety, technique, or climbing areas). If the question is NOT about "
+        "gear, safety, accidents, technique, or climbing areas). If the question is NOT about "
         "climbing at all (e.g., restaurants, hotels, cooking, sports scores, history, "
         'weather, coding), immediately respond: "I don\'t have data on this in my '
         'climbing knowledge base. I can only answer questions about rock climbing."\n'
