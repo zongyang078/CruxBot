@@ -262,7 +262,7 @@ Results of the human vs. GPT-4o score comparison will be reported in the final s
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sherwin Vahidimowlavi | Chunking pipeline (`src/chunking.py`), embedding pipeline (`src/embedding.py`), ChromaDB indexing of 382k vectors                                                                                    |
 | Linxuan Li            | Retrieval logic (`src/retrieval.py`), RAG orchestration (`src/rag_pipeline.py`), Ollama integration, initial prompt design                                                                           |
-| Lingyun Xiao          | Streamlit frontend (`streamlit_app.py`), FastAPI backend (`app.py`), GCP deployment, Docker containerization                                                                                         |
+| Lingyun Xiao          | Streamlit frontend, FastAPI backend, GCP deployment, Docker containerization; LLM-as-Judge evaluation framework (GPT-4o judge, rubric design, automated scoring); evaluation visualization (heatmap & radar chart); human evaluation design (10-query validation suite); project writeup |
 | Zongyang Li           | Data collection (6 sources, 338k entries), hybrid search (BM25+dense+RRF), query intent detection, grade normalization, prompt engineering, anti-hallucination design, evaluation suite (50 queries) |
 | All                   | Writeup and oral delivery                                                                                                                                                                            |
 
