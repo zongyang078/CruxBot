@@ -330,9 +330,9 @@ If the question is clearly outside the climbing domain, the correct answer is a 
 | S05 | Safety | 2| 3 | -1|
 | G05 | Gear | 3| 4 | -1|
 | G01 | Gear | 3| 3 | 0|
-| H03 | Anti-hallucination | | 5 | |
+| H03 | Anti-hallucination | 5| 5 | 0|
 | H06 | Anti-hallucination | 3| 1 |2 |
-| **Average** | | | **3.50** | |
+| **Average** | | 3.3| **3.50** | -0.2|
 
 ---
 
