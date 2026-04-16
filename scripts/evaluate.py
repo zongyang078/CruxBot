@@ -274,7 +274,8 @@ def run_evaluation():
     print(f"    {with_citations}/{len(cite_queries)} responses included source URLs")
 
     # Save results
-    output_path = "data/evaluation_results.json"
+    output_path = "evaluation/evaluation_results.json"
+    os.makedirs("evaluation", exist_ok=True)
     with open(output_path, "w") as f:
         json.dump({
             "summary": {

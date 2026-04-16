@@ -12,7 +12,7 @@ Usage:
     OPENAI_API_KEY=sk-... python -u scripts/evaluate_llm_judge.py
 
 Output:
-    data/llm_judge_results.json   — full scores per query
+    evaluation/llm_judge_results.json   — full scores per query
     Prints summary table to stdout
 """
 
@@ -34,7 +34,7 @@ from src.rag_pipeline import answer
 # ============================================================
 CHROMA_PATH = "data/chroma"
 JUDGE_MODEL = "gpt-4o"
-OUTPUT_PATH = "data/llm_judge_results.json"
+OUTPUT_PATH = "evaluation/llm_judge_results.json"
 
 # ============================================================
 # Rubric
@@ -332,7 +332,7 @@ def run():
         },
         "results": results,
     }
-    os.makedirs("data", exist_ok=True)
+    os.makedirs("evaluation", exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(output, f, indent=2)
     print(f"\nFull results saved to: {OUTPUT_PATH}")

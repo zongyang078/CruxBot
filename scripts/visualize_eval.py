@@ -9,17 +9,18 @@ Usage:
     python -u scripts/visualize_eval.py
 
 Output:
-    data/eval_heatmap.png
-    data/eval_radar.png
+    evaluation/eval_heatmap.png
+    evaluation/eval_radar.png
 """
 
 import json
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import FancyBboxPatch
 
-RESULTS_PATH = "data/llm_judge_results.json"
+RESULTS_PATH = "evaluation/llm_judge_results.json"
 
 # ── load ──────────────────────────────────────────────────────────────
 with open(RESULTS_PATH) as f:
@@ -72,9 +73,10 @@ plt.colorbar(im, ax=ax, label="Score (1–5)", shrink=0.85)
 ax.set_title("CruxBot GPT-4o Evaluation — Scores by Category & Dimension",
              fontsize=13, fontweight="bold", pad=14)
 plt.tight_layout()
-plt.savefig("data/eval_heatmap.png", dpi=150, bbox_inches="tight")
+os.makedirs("evaluation", exist_ok=True)
+plt.savefig("evaluation/eval_heatmap.png", dpi=150, bbox_inches="tight")
 plt.close()
-print("Saved: data/eval_heatmap.png")
+print("Saved: evaluation/eval_heatmap.png")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -116,8 +118,8 @@ ax.set_title("CruxBot GPT-4o Evaluation — Radar by Category",
 ax.legend(loc="upper right", bbox_to_anchor=(1.35, 1.15), fontsize=10)
 
 plt.tight_layout()
-plt.savefig("data/eval_radar.png", dpi=150, bbox_inches="tight")
+plt.savefig("evaluation/eval_radar.png", dpi=150, bbox_inches="tight")
 plt.close()
-print("Saved: data/eval_radar.png")
+print("Saved: evaluation/eval_radar.png")
 
-print("\nDone! Both charts saved to data/")
+print("\nDone! Both charts saved to evaluation/")
