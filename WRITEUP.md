@@ -6,6 +6,12 @@
 
 ---
 
+## Executive Summary
+
+CruxBot is a domain-specific Retrieval-Augmented Generation (RAG) system that serves as an intelligent rock climbing assistant. Built on a curated corpus of 338,433 documents spanning route databases, community forums, accident reports, and gear reviews from six sources, CruxBot uses hybrid retrieval (BM25 keyword search + dense cosine similarity, merged via Reciprocal Rank Fusion) and a locally hosted Llama 3 8B via Ollama to deliver accurate, cited answers to climbing-related queries. Automated evaluation on a 50-query test suite shows a 90% overall pass rate — up from 68% in the baseline dense-only version — with 100% pass rates on training and safety categories, and 90% anti-hallucination accuracy on out-of-domain questions. Human evaluation on 10 representative queries validates GPT-4o as a reliable automated judge, with an average score difference of only 0.2 points. The system is containerized with Docker and deployed on GCP with NVIDIA L4 GPU acceleration.
+
+---
+
 ## 1. Motivation and Impact
 
 Rock climbing has undergone a surge in mainstream popularity, yet the knowledge infrastructure supporting the sport remains deeply fragmented. A climber seeking beta (route-specific information) for a trip to Yosemite must cross-reference Mountain Project for route descriptions, Reddit for recent conditions, American Alpine Club (AAC) journals for safety precedents, and gear forums for equipment recommendations — none of which communicate with one another. This fragmentation wastes time and, in safety-critical situations, can lead to poor decisions.
@@ -48,6 +54,34 @@ We use **Llama 3 8B** served locally via **Ollama**, a framework for running LLM
 | ChatGPT (GPT-4)         | Closed-book generation        | Hallucination, no climbing-specific citations       |
 | Perplexity AI           | Web search + generation       | Not domain-specialized, no structured climbing data |
 | CruxBot                 | Hybrid RAG, 6 curated sources | Domain-specific, cited, anti-hallucination          |
+
+---
+
+## 2.5 Data Sources and Collection
+
+Our corpus aggregates six publicly available sources, providing diverse coverage of the climbing domain:
+
+| Source | Content | Entries | Method | License / URL |
+|--------|---------|---------|--------|---------------|
+| [OpenBeta](https://openbeta.io) | Routes, grades, GPS (47 US states) | 85,898 | GraphQL API (BFS traversal) | CC0 |
+| [Mountain Project](https://www.kaggle.com/datasets/pdegner/mountain-project-rotues-and-forums) (Kaggle) | Routes with descriptions & URLs | 116,700 | Kaggle download | Copyright-authors |
+| MP Forums (Kaggle) | Training, gear, technique discussions | 99,173 | Kaggle download | Copyright-authors |
+| [AAC Articles](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles) (Kaggle) | Accident reports, expedition records | 27,828 | Kaggle download | CC0 |
+| Reddit | Community discussions (2024–2026) | 2,372 | Public JSON endpoints | r/climbing, r/bouldering, r/climbharder |
+| Gear Reviews (Kaggle) | Equipment reviews & ratings | 6,462 | Kaggle download | Copyright-authors |
+| **Total (after cleaning & dedup)** | | **338,433** | | |
+
+### Data Cleaning and Deduplication
+
+All six sources are normalized into a unified 12-field schema: `doc_id`, `title`, `text`, `content_type`, `source`, `source_url`, `grade`, `route_type`, `location`, `lat`, `lng`, and `metadata`. Cleaning operations include:
+
+- **Route deduplication:** OpenBeta and Kaggle MP had 76.6% route name overlap. Kaggle versions were kept (richer descriptions and clickable URLs), supplemented with OpenBeta GPS coordinates.
+- **Short-text filtering:** Forums < 50 chars, Reddit < 30 chars, Articles < 100 chars removed.
+- **DMCA text removal:** 7 entries containing copyright complaint text detected and removed.
+- **Text composition:** ~85k OpenBeta routes lacking descriptions had structured fields composed into natural language (e.g., "Moonlight Buttress is a 5.12d Trad route in Utah > Zion").
+- **Global deduplication:** Final MD5-hash-based dedup removed 46,410 duplicate entries.
+
+A key data limitation: the Kaggle MP forum dataset (99,173 entries) does not include per-post URLs. All forum entries share the generic URL `mountainproject.com/forum`, which reduces citation quality for training and gear categories.
 
 ---
 
@@ -121,7 +155,16 @@ We mitigate this with three prompt engineering techniques:
 
 ### 3.4 Chunking Strategy
 
-Long documents (AAC articles, forum threads) are split into 300–500 token chunks with a 50-token overlap between consecutive chunks, using sentence-boundary detection to prevent splitting mid-sentence. Short documents (routes, gear reviews) are kept as single chunks. Each chunk inherits the metadata of its parent document (`source_url`, `title`, `doc_id`, `content_type`).
+Documents are split into chunks using content-type-specific parameters to balance context preservation with retrieval granularity:
+
+| Content Type | Chunk Size | Overlap | Notes |
+|-------------|-----------|---------|-------|
+| Routes | 300 tokens | 50 tokens | Short routes (< 300 tokens) pass through as single chunks |
+| Forums & Reddit | 400 tokens | 75 tokens | Split at sentence boundaries |
+| AAC Articles | 500 tokens | 100 tokens | Longer chunks preserve narrative context |
+| Gear Reviews | 350 tokens | 50 tokens | |
+
+Splitting uses LangChain's `RecursiveCharacterTextSplitter` with sentence-boundary-aware separators (`\n\n`, `\n`, `. `, ` `). Each chunk inherits the metadata of its parent document (`source_url`, `title`, `doc_id`, `content_type`). The final corpus contains **382,748 chunks** from 338,433 documents.
 
 ### 3.5 Grade Normalization
 
