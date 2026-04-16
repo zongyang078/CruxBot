@@ -14,28 +14,28 @@ Climbing knowledge is scattered across forums, wikis, and databases. CruxBot sol
 
 ## Data Sources
 
-| Source | Content | Entries | Method |
-|--------|---------|---------|--------|
-| [OpenBeta](https://openbeta.io) | Routes, grades, GPS (47 US states) | 85,898 | GraphQL API |
-| [Mountain Project](https://www.kaggle.com/datasets/pdegner/mountain-project-rotues-and-forums) (Kaggle) | Routes with descriptions & URLs | 116,700 | Kaggle download |
-| MP Forums (Kaggle) | Training, gear, technique discussions | 99,173 | Kaggle download |
-| [AAC Articles](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles) (Kaggle) | Accident reports, expedition records | 27,828 | Kaggle download |
-| Reddit | Community discussions (2024–2026) | 2,372 | Public JSON endpoints |
-| Gear Reviews (Kaggle) | Equipment reviews & ratings | 6,462 | Kaggle download |
-| **Total** | | **338,433** | |
+| Source                                                                                                  | Content                               | Entries     | Method                |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------- | --------------------- |
+| [OpenBeta](https://openbeta.io)                                                                         | Routes, grades, GPS (47 US states)    | 85,898      | GraphQL API           |
+| [Mountain Project](https://www.kaggle.com/datasets/pdegner/mountain-project-rotues-and-forums) (Kaggle) | Routes with descriptions & URLs       | 116,700     | Kaggle download       |
+| MP Forums (Kaggle)                                                                                      | Training, gear, technique discussions | 99,173      | Kaggle download       |
+| [AAC Articles](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles) (Kaggle)    | Accident reports, expedition records  | 27,828      | Kaggle download       |
+| Reddit                                                                                                  | Community discussions (2024–2026)     | 2,372       | Public JSON endpoints |
+| Gear Reviews (Kaggle)                                                                                   | Equipment reviews & ratings           | 6,462       | Kaggle download       |
+| **Total**                                                                                               |                                       | **338,433** |                       |
 
 All entries are cleaned, deduplicated, and normalized into a unified schema. 100% have clickable source URLs for citation. See [DATA_COLLECTION_METHODS.md](DATA_COLLECTION_METHODS.md) for full documentation.
 
 ## Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| LLM | Llama 3 8B via [Ollama](https://ollama.ai/) (local, no API calls) |
-| Embeddings | sentence-transformers (`all-MiniLM-L6-v2`, 384-dim) |
-| Vector DB | ChromaDB |
-| Retrieval | Hybrid search (BM25 + dense cosine similarity + RRF fusion) |
-| Frontend | Streamlit (streaming output, keyword highlighting) |
-| Deployment | Docker on GCP (NVIDIA L4 GPU) |
+| Component  | Technology                                                        |
+| ---------- | ----------------------------------------------------------------- |
+| LLM        | Llama 3 8B via [Ollama](https://ollama.ai/) (local, no API calls) |
+| Embeddings | sentence-transformers (`all-MiniLM-L6-v2`, 384-dim)               |
+| Vector DB  | ChromaDB                                                          |
+| Retrieval  | Hybrid search (BM25 + dense cosine similarity + RRF fusion)       |
+| Frontend   | Streamlit (streaming output, keyword highlighting)                |
+| Deployment | Docker on GCP (NVIDIA L4 GPU)                                     |
 
 ## Key Features
 
@@ -51,16 +51,37 @@ All entries are cleaned, deduplicated, and normalized into a unified schema. 100
 
 50-query test suite across 5 categories (v1 → v3 comparison):
 
-| Category | v1 (baseline) | v3 (final) |
-|----------|--------------|------------|
-| Route | 50% | **70%** |
-| Training | 40% | **100%** |
-| Safety | 80% | **100%** |
-| Gear | 70% | **90%** |
-| Anti-hallucination | 100% | **90%** |
-| **Overall** | **68%** | **90%** |
+| Category           | v1 (baseline) | v3 (final) |
+| ------------------ | ------------- | ---------- |
+| Route              | 50%           | **70%**    |
+| Training           | 40%           | **100%**   |
+| Safety             | 80%           | **100%**   |
+| Gear               | 70%           | **90%**    |
+| Anti-hallucination | 100%          | **90%**    |
+| **Overall**        | **68%**       | **90%**    |
 
 Key improvements from hybrid search, intent detection, grade normalization, and prompt engineering.
+
+## Data Access
+
+> **TODO:** Add Google Drive links for the pre-built data files (too large for git).
+> The following files need to be uploaded and linked here:
+>
+> - `data/unified/cruxbot_unified.json` — 338k unified entries (369 MB)
+> - `data/chroma/` — ChromaDB vector store (382k vectors)
+>
+> Once uploaded, replace this section with:
+>
+> ```
+> | File | Google Drive Link | Size |
+> |------|-------------------|------|
+> | cruxbot_unified.json | [link] | 369 MB |
+> | chroma_db.zip | [link] | ~XX MB |
+> ```
+>
+> Download and place under `data/` before running the app.
+
+---
 
 ## Project Structure
 
@@ -183,24 +204,24 @@ GCP VM (NVIDIA L4 GPU)
 
 ### Scripts
 
-| Script | When to use |
-|--------|-------------|
-| `bash scripts/setup_gcp.sh` | First-time setup — creates VM, installs drivers, uploads data, builds Docker |
-| `bash scripts/start_gcp.sh` | Start stopped VM and bring up containers |
-| `bash scripts/update_gcp.sh` | Push code updates, rebuild and restart containers |
-| `bash scripts/update_chroma.sh <zip>` | Replace ChromaDB vector store |
+| Script                                | When to use                                                                  |
+| ------------------------------------- | ---------------------------------------------------------------------------- |
+| `bash scripts/setup_gcp.sh`           | First-time setup — creates VM, installs drivers, uploads data, builds Docker |
+| `bash scripts/start_gcp.sh`           | Start stopped VM and bring up containers                                     |
+| `bash scripts/update_gcp.sh`          | Push code updates, rebuild and restart containers                            |
+| `bash scripts/update_chroma.sh <zip>` | Replace ChromaDB vector store                                                |
 
 > Note: First Streamlit request after restart triggers BM25 index build (~30s), cached automatically afterwards.
 
 ## Team
 
-| Member | Contribution |
-|--------|-------------|
-| Sherwin Vahidimowlavi | Chunking pipeline, embedding pipeline, ChromaDB indexing (382k vectors) |
-| Linxuan Li | Retrieval logic, RAG orchestration, Ollama integration, prompt design |
-| Lingyun Xiao | Streamlit frontend, FastAPI backend, GCP deployment, Docker containerization |
-| Zongyang Li | Data collection, hybrid search (BM25+dense+RRF), query intent detection, grade normalization, prompt engineering, anti-hallucination design, evaluation |
-| All | Writeup |
+| Member                | Contribution                                                                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sherwin Vahidimowlavi | Chunking pipeline, embedding pipeline, ChromaDB indexing (382k vectors)                                                                                 |
+| Linxuan Li            | Retrieval logic, RAG orchestration, Ollama integration, prompt design                                                                                   |
+| Lingyun Xiao          | Streamlit frontend, FastAPI backend, GCP deployment, Docker containerization, Evaluation                                                                |
+| Zongyang Li           | Data collection, hybrid search (BM25+dense+RRF), query intent detection, grade normalization, prompt engineering, anti-hallucination design, evaluation |
+| All                   | Writeup                                                                                                                                                 |
 
 ## License
 

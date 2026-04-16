@@ -1,0 +1,1350 @@
+{
+  "judge_model": "gpt-4o",
+  "total_queries": 50,
+  "overall_averages": {
+    "relevance": 4.4,
+    "factual_accuracy": 3.72,
+    "citation_quality": 2.78,
+    "completeness": 3.74,
+    "overall": 3.58
+  },
+  "by_category": {
+    "route": {
+      "relevance": 4.1,
+      "factual_accuracy": 3.9,
+      "citation_quality": 3.5,
+      "completeness": 3.3,
+      "overall": 3.5
+    },
+    "training": {
+      "relevance": 4.2,
+      "factual_accuracy": 3.1,
+      "citation_quality": 1.5,
+      "completeness": 3.6,
+      "overall": 3.1
+    },
+    "safety": {
+      "relevance": 4.7,
+      "factual_accuracy": 4.0,
+      "citation_quality": 2.5,
+      "completeness": 3.6,
+      "overall": 3.6
+    },
+    "gear": {
+      "relevance": 4.4,
+      "factual_accuracy": 3.0,
+      "citation_quality": 1.8,
+      "completeness": 3.6,
+      "overall": 3.1
+    },
+    "hallucination": {
+      "relevance": 4.6,
+      "factual_accuracy": 4.6,
+      "citation_quality": 4.6,
+      "completeness": 4.6,
+      "overall": 4.6
+    }
+  },
+  "results": [
+    {
+      "id": "R01",
+      "category": "route",
+      "query": "Recommend a 5.10 sport climbing route in California",
+      "answer": "Based on the provided context, there are two 5.10 sport climbing routes mentioned:\n\n1. Slab Middle (5.10) located in California > Northeast California > Castle Crags > Indian Springs Canyon > Pin Cushion Wall [2]\n2. Slab RHS (5.10) located in California > Northeast California > Castle Crags > Indian Springs Canyon > Pin Cushion Wall [4]\n\nBoth routes are located in the same area, Castle Crags. If you're looking for a 5.10 sport climbing route in California, I would recommend either of these two options.\n\nNote: The Unnamed 5.10a Sport route mentioned in [5] is not located in California, but rath",
+      "sources": [
+        "https://openbeta.io/climb/d2a1374a-1615-5a2f-92f4-0cddab8ab8f3",
+        "https://openbeta.io/climb/829e606d-c49b-5e17-aaa7-4105529a6ae0",
+        "https://openbeta.io/climb/92ae2b89-332c-514a-a1d8-df6917a22fc4",
+        "https://openbeta.io/climb/c85c00c3-c1d1-5e68-81df-e1fa99e708f6",
+        "https://www.mountainproject.com/route/106529890/unnamed-510a-sport"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's request for a 5.10 sport climbing route in California.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The answer accurately reflects the information from the retrieved sources, including the correct location and grade of the routes.",
+        "citation_quality": 4,
+        "citation_quality_reason": "The citations are specific and relevant, but the URLs are not directly clickable in the response.",
+        "completeness": 5,
+        "completeness_reason": "The answer provides two specific route recommendations and clarifies a potential confusion with a route in Arizona.",
+        "overall": 5,
+        "overall_reason": "The response is fully relevant, accurate, and complete with appropriate use of sources, making it a comprehensive answer to the user's query."
+      }
+    },
+    {
+      "id": "R02",
+      "category": "route",
+      "query": "What are some good beginner trad routes in Red River Gorge?",
+      "answer": "I can answer questions about rock climbing! Based on the provided context, here are some beginner-friendly trad routes in Red River Gorge:\n\n1. **Beginner's Staircase** (5.3): Located at Staircase Wall, Northern Gorge, Red River Gorge Kentucky. This route is suitable for beginners and has a first ascent by Bill Strachan in 1975.\n2. **Standard Route** (4th, 2.6 stars): Found at Courthouse Rock, Northern Gorge, Red River Gorge Kentucky. Although it's not specifically labeled as a beginner route, its easy climbing and secure protection make it accessible to new climbers.\n\nThese routes are marked w",
+      "sources": [
+        "https://www.mountainproject.com/route/105866010/standard-route",
+        "https://www.mountainproject.com/route/106723829/rockhouse",
+        "https://www.mountainproject.com/route/105880966/new-red-river",
+        "https://openbeta.io/climb/46c2283e-b15b-5d69-9ea5-d00160fe072a",
+        "https://www.mountainproject.com/route/105944154/guide-route-left"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's query about beginner trad routes in Red River Gorge.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides specific routes, but the citations do not directly support the details given about these routes.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations provided do not match the routes mentioned in the answer, making them unhelpful for verification.",
+        "completeness": 4,
+        "completeness_reason": "The answer lists two routes and provides some context about their suitability for beginners, but could include more routes or details if available.",
+        "overall": 3,
+        "overall_reason": "While the answer is relevant and partially complete, the factual accuracy and citation quality are lacking due to unsupported claims and mismatched sources."
+      }
+    },
+    {
+      "id": "R03",
+      "category": "route",
+      "query": "Best bouldering problems around V4 in Bishop California",
+      "answer": "A climbing-related question!\n\nAccording to the context, there are three V4 bouldering climbing routes mentioned in Bishop, California:\n\n1. Problem A (Grade: V4) - located in Mammoth Lakes Area > * Mammoth Lakes Bouldering > T J Lake > Medicine Boulder [3]\n2. Peanut arete (Grade: V4) - located in Bishop Peak > * Bishop Peak Bouldering > Boulder In The Woods [4]\n3. Problem A (Grade: V4) - located in Volcanic Tablelands (Happy/Sad Boulders) > Happy Boulders > West Rim Area > Frontierland > Highbrow Area [5]\n\nSo, the best bouldering problems around V4 in Bishop, California are:\n\n* Problem A (Mammo",
+      "sources": [
+        "https://openbeta.io/climb/01d9a50a-b8db-51d4-8dbc-b38e6c7cde84",
+        "https://openbeta.io/climb/8e79b658-9d00-514d-a7d8-e86f987ca127",
+        "https://openbeta.io/climb/60bee475-a4ee-5ca8-b864-efc7f26c7575",
+        "https://openbeta.io/climb/e0691288-9a04-5d60-9504-67caac29545f",
+        "https://openbeta.io/climb/7fe225b2-9ed5-5fec-835c-2531d167872d"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer attempts to address the query but includes locations not typically associated with Bishop, California, such as Mammoth Lakes and Bishop Peak.",
+        "factual_accuracy": 2,
+        "factual_accuracy_reason": "The answer lists problems and locations that are not consistent with the retrieved sources, and some locations are inaccurately described as being in Bishop.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations provided do not clearly match the content described in the answer, and the URLs are not specific to the problems mentioned.",
+        "completeness": 2,
+        "completeness_reason": "The answer does not fully address the question as it includes incorrect locations and lacks comprehensive coverage of Bishop's bouldering problems.",
+        "overall": 2,
+        "overall_reason": "The response is partially relevant but contains factual inaccuracies and poor citation quality, leading to an incomplete and somewhat misleading answer."
+      }
+    },
+    {
+      "id": "R04",
+      "category": "route",
+      "query": "Recommend a multi-pitch route in Yosemite for intermediate climbers",
+      "answer": "Based on the provided routes, I'd recommend \"Off Route Direct\" (5.11c) located in Central Royal Arches, Valley North Side, Yosemite National Park, California. This route is suitable for intermediate climbers and has several key features:\n\n1. Long pitch count: 14 pitches\n2. Varied climbing styles: Liebacking, complicated roofs, friction slab, and stellar crack systems\n3. Opportunities for protection: Double rack to #2, with optional double fours for the 12th pitch\n4. Scenic views: The route ends at a rappel point with spectacular views of Royal Arches\n\nPlease note that this recommendation is ba",
+      "sources": [
+        "https://openbeta.io/climb/4541eea8-a26a-5103-a4c1-9370ac6ec744",
+        "https://www.mountainproject.com/route/107106274/the-footstool-right",
+        "https://www.mountainproject.com/route/114237930/counterparts",
+        "https://www.mountainproject.com/route/107353932/crashline",
+        "https://www.mountainproject.com/route/117325806/off-route-direct"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer recommends a multi-pitch route in Yosemite, which is relevant to the user's query, but the difficulty level (5.11c) may be challenging for intermediate climbers.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The details about 'Off Route Direct' are consistent with the retrieved source, and there are no contradictions or invented facts.",
+        "citation_quality": 5,
+        "citation_quality_reason": "The answer provides a specific and clickable citation that matches the content discussed.",
+        "completeness": 4,
+        "completeness_reason": "The answer provides a detailed description of the route but could have included more options or considerations for intermediate climbers.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and factually accurate with good citation quality, but the recommendation might not fully align with the skill level of intermediate climbers."
+      }
+    },
+    {
+      "id": "R05",
+      "category": "route",
+      "query": "What are some classic 5.12 routes in Smith Rock Oregon?",
+      "answer": "A great question!\n\nAfter reviewing the provided context, I found that there is no information about classic 5.12 routes in Smith Rock, Oregon. However, I can suggest checking [2] Wildfire Wall West Side (z) Lower Gorge Smith Rock Central Oregon Oregon, which has a 5.12a Sport climbing route called White Trash.\n\nUnfortunately, the provided context does not include other classic 5.12 routes in Smith Rock, but you may want to explore further online resources or consult with local climbing experts for more information.\n\nRemember, if you have any more questions about rock climbing, I'm here to help",
+      "sources": [
+        "https://openbeta.io/climb/63b4160b-11df-5e6d-9974-f5f20de69b93",
+        "https://www.mountainproject.com/route/105812540/white-trash",
+        "https://www.mountainproject.com/route/109366996/route-12",
+        "https://openbeta.io/climb/c4661972-c040-5fcc-94d8-c59566c3ed10",
+        "https://www.mountainproject.com/route/105824058/route-5"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer partially addresses the query by mentioning a 5.12 route, but it does not provide a list of classic routes as requested.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The mention of the 5.12a route 'White Trash' is accurate according to the sources, but the claim of lacking information on other routes is not fully supported by the sources.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citation for 'White Trash' is specific, but the answer lacks citations for other potential routes or a broader context.",
+        "completeness": 2,
+        "completeness_reason": "The answer does not fully address the user's request for a list of classic 5.12 routes, providing only one example and suggesting further research.",
+        "overall": 3,
+        "overall_reason": "The response is partially relevant and accurate but lacks completeness and sufficient citations to fully satisfy the user's query."
+      }
+    },
+    {
+      "id": "R06",
+      "category": "route",
+      "query": "Find me a 5.8 sport route in Joshua Tree",
+      "answer": "I can help you with that!\n\nBased on the context provided, I found two 5.8 sport climbing routes in Joshua Tree National Park:\n\n1. **Unknown 5.8 #2**: Located in the Magic Mountain Area of Pinto Basin, OZ Area. Grade: 5.8.\n2. **Pooky Lips**: Located in the Comic Book Area, Anthony Slabs, Central Joshua Tree. Grade: 5.8.\n\nBoth routes are listed as 5.8 sport climbing routes in the provided context. If you'd like more information about these routes or would like to know the details of other routes in Joshua Tree National Park, feel free to ask!",
+      "sources": [
+        "https://openbeta.io/climb/82e56559-5efa-5a29-b4e9-bf839f8fa983",
+        "https://openbeta.io/climb/c5c51058-7cd0-5f9e-928c-b55c0fb9780a",
+        "https://openbeta.io/climb/9580cee6-55bf-5657-88c0-e418baa26811",
+        "https://www.mountainproject.com/route/106529890/unnamed-510a-sport",
+        "https://openbeta.io/climb/b8e798a7-d274-5589-ac67-8a66bee2d2bc"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's request for 5.8 sport routes in Joshua Tree.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer lists two routes, but the retrieved sources do not confirm the details of these specific routes.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations provided do not specifically match the routes mentioned in the answer.",
+        "completeness": 3,
+        "completeness_reason": "The answer provides two route options but lacks detailed information or confirmation from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and partially complete but lacks factual grounding and specific citations for the routes mentioned."
+      }
+    },
+    {
+      "id": "R07",
+      "category": "route",
+      "query": "What are popular ice climbing routes in Colorado?",
+      "answer": "I'm happy to help with your question! Based on the provided context, I found a route that is specifically mentioned as an ice and mixed climbing route:\n\nNorth Face / Cables Route (Grade: 5.5 M2-3 | Location: Long's Peak/Mt. Meeker Cirque RMNP - Mixed/Ice CO Ice & Mixed Colorado)\n\nThis route is described as having alpine ice to 50 degrees on the lower snowfield and a great little narrow ribbon of rotten ice to climb in the dihedral, along with some fun mixed climbing to exit onto the upper snowfield.\n\nPlease note that this is the only specific ice climbing route mentioned in the provided contex",
+      "sources": [
+        "https://openbeta.io/climb/d19b8095-a961-5856-a499-984007de5dc3",
+        "https://openbeta.io/climb/3a89869e-b7bb-51ca-9714-28e9580a83bc",
+        "https://www.mountainproject.com/route/109376366/one-for-all",
+        "https://openbeta.io/climb/8c99fa3d-f3cf-5bc5-91f0-902861b00e6a",
+        "https://www.mountainproject.com/route/105747535/north-face-cables-route"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer partially addresses the query by mentioning one ice climbing route in Colorado, but does not provide a comprehensive list of popular routes.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The information about the North Face / Cables Route is consistent with the retrieved sources.",
+        "citation_quality": 5,
+        "citation_quality_reason": "The citation provided is specific and directly supports the information given about the North Face / Cables Route.",
+        "completeness": 2,
+        "completeness_reason": "The answer is not comprehensive as it only mentions one route, while the query asks for popular ice climbing routes in Colorado.",
+        "overall": 3,
+        "overall_reason": "The response is accurate and well-cited but lacks completeness and relevance as it only provides information on one route instead of a broader list of popular routes."
+      }
+    },
+    {
+      "id": "R08",
+      "category": "route",
+      "query": "Suggest a beginner-friendly climbing route in Utah",
+      "answer": "I'd be happy to help!\n\nBased on the provided routes, I would recommend the \"Lone Star\" route (Grade: 5.9) located in Illinois ([2]). While it's not specifically in Utah, it's mentioned as a good beginner-friendly route.\n\nHowever, if you're looking for a route in Utah, I would suggest considering the \"Always Leave a Generous Root Tip\" route (Grade: 5.6) located in The Red Rock Wasatch Range Utah ([4]). It's rated 1.0 stars and has only 1 pitch, making it a relatively short and accessible climb.\n\nAnother option could be the \"Easiest Way\" V-easy bouldering climbing route located in Utah > Wasatch",
+      "sources": [
+        "https://openbeta.io/climb/c41dd801-1443-5115-bc15-98a02af82c06",
+        "https://www.mountainproject.com/route/111146856/lone-star",
+        "https://openbeta.io/climb/a04ab44e-751d-51d7-9f7a-a4de2882d47b",
+        "https://www.mountainproject.com/route/105742037/always-leave-a-generous-root-tip",
+        "https://openbeta.io/climb/6f8e9b92-01a3-5395-9296-9087abd2c694"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the user's request for beginner-friendly climbing routes in Utah, but it initially mentions a route in Illinois, which is irrelevant.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The routes mentioned in Utah are supported by the sources, but the initial mention of a route in Illinois is not relevant to the user's query.",
+        "citation_quality": 5,
+        "citation_quality_reason": "All citations are specific and match the content provided in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer provides two relevant routes in Utah, but the initial mention of an Illinois route detracts from completeness.",
+        "overall": 4,
+        "overall_reason": "The response is mostly relevant and accurate with good citations, but the initial mention of an Illinois route slightly detracts from its relevance and completeness."
+      }
+    },
+    {
+      "id": "R09",
+      "category": "route",
+      "query": "What is the hardest sport route in El Potrero Chico?",
+      "answer": "Based on the provided context, I can help you with that!\n\nAccording to [4] Cryin Brian is a 5.13d Sport climbing route located in The Outrage Wall El Potrero Chico Nuevo Leon Northern Mexico Mexico North America International. This route has been rated 4.0 stars and is considered one of the hardest pitches in Potrero, with very few ascents.\n\nSo, according to this information, Cryin Brian appears to be the hardest sport route in El Potrero Chico, with a grade of 5.13d.",
+      "sources": [
+        "https://www.mountainproject.com/route/106087735/el-sendero-luminoso",
+        "https://www.mountainproject.com/route/112799232/el-abuelito-de-yaveh",
+        "https://www.mountainproject.com/route/114088105/el-potaje-de-perico",
+        "https://www.mountainproject.com/route/112328789/cryin-brian",
+        "https://www.mountainproject.com/route/114088305/el-caidero"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about the hardest sport route in El Potrero Chico.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The information about 'Cryin Brian' being a 5.13d route is consistent with the retrieved source.",
+        "citation_quality": 5,
+        "citation_quality_reason": "The citation provided is specific and directly links to the relevant route information.",
+        "completeness": 4,
+        "completeness_reason": "The answer identifies 'Cryin Brian' as one of the hardest routes but does not explore if there are other routes of similar difficulty.",
+        "overall": 5,
+        "overall_reason": "The response is accurate, relevant, and well-cited, though it could be slightly more comprehensive."
+      }
+    },
+    {
+      "id": "R10",
+      "category": "route",
+      "query": "Recommend a V0-V2 bouldering area near San Francisco",
+      "answer": "A question about rock climbing!\n\nBased on the provided context, I can suggest some V0-V2 bouldering areas near San Francisco. From the information available, I see that there are two areas mentioned:\n\n1. Castle Rock Area (V2 route: Abu Nidal Cranks A Rad)\n2. Bishop Area (V0- route: Bouldering.com)\n\nThe Bishop Area is a bit farther from San Francisco than the Castle Rock Area, but it's still within driving distance.\n\nI recommend checking out the Castle Rock Area, specifically the Klinghoffers area, which has some V0-V2 bouldering routes. You can start with Abu Nidal Cranks A Rad, rated as a V2,",
+      "sources": [
+        "https://openbeta.io/climb/397bc9ca-a7ab-5753-8853-29aa242fb03d",
+        "https://openbeta.io/climb/05c10a7d-b22d-5491-bdb6-da22cd436aa7",
+        "https://openbeta.io/climb/47f1e69f-3b43-5547-9834-f93d8a3766ee",
+        "https://openbeta.io/climb/559a0c32-d731-5f5e-809f-80900b9c6b4e",
+        "https://openbeta.io/climb/562e70d2-7dd2-5825-a392-c4415d2fe809"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer is mostly relevant, suggesting bouldering areas near San Francisco, but includes Bishop, which is quite far from San Francisco.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer mentions specific routes and areas, but the sources do not confirm the details about the routes or their proximity to San Francisco.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are not specific to the claims made about the bouldering areas and routes, making it difficult to verify the information.",
+        "completeness": 3,
+        "completeness_reason": "The answer provides some suggestions but lacks comprehensive coverage of all potential bouldering areas near San Francisco.",
+        "overall": 3,
+        "overall_reason": "The response is partially relevant and somewhat accurate but lacks strong citation support and completeness in covering all nearby bouldering options."
+      }
+    },
+    {
+      "id": "T01",
+      "category": "training",
+      "query": "How should I train finger strength for climbing?",
+      "answer": "I'd be happy to help!\n\nBased on the provided context, it seems that hangboards are a popular training tool among climbers to improve finger strength. Several users mention using hangboards at home or in gyms, and some share their experiences with using them.\n\nOne user mentions specifically using hangboards with soft rounded edges to target sloper holds, which can be beneficial for building wrist strength and overall climbing technique ([2]).\n\nAnother user notes that training gloves might not be necessary if you're planning to train indoors, as liquid chalk can provide sufficient grip ([4]). Ho",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.reddit.com/r/bouldering/comments/1r3vwce/tips_on_technique/",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about training finger strength for climbing.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides general advice on hangboard use, but the specific claims about user experiences and tips are not directly supported by the retrieved sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not link to specific content that supports the claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers various aspects of finger strength training, including hangboard use, warm-ups, and integration into a broader training plan, but lacks specific details from the sources.",
+        "overall": 3,
+        "overall_reason": "While the answer is relevant and covers the topic well, it lacks specific citations and some factual grounding from the provided sources."
+      }
+    },
+    {
+      "id": "T02",
+      "category": "training",
+      "query": "What is the best hangboard routine for intermediate climbers?",
+      "answer": "A climbing-related question! I'm happy to help.\n\nBased on the context, it seems like the topic of hangboards has been discussed in several threads. While there isn't a single, definitive answer provided, we can extract some useful information from the conversations.\n\nFrom [1], we learn that hangboard training can be beneficial for intermediate climbers, especially those looking to improve their finger strength and power endurance. The author also mentions the importance of incorporating other training methods alongside hangboarding.\n\nIn [2], a user recommends the Partnered Backcountry Board as",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the user's question about hangboard routines for intermediate climbers, but includes some irrelevant content about specific hangboard brands.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides general advice consistent with typical hangboard training but lacks specific grounding in the retrieved sources.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not link to specific content that supports the claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer provides a comprehensive routine outline but could be more specific with examples from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is generally relevant and provides useful information, but lacks specific citations and some content is not directly supported by the sources."
+      }
+    },
+    {
+      "id": "T03",
+      "category": "training",
+      "query": "How do I improve my footwork on overhangs?",
+      "answer": "A great question!\n\nBased on the context, it seems like you're experiencing some discomfort or difficulty with your current climbing shoes on overhangs. [2] mentions feeling like they're \"climbing in clown shoes\" and being uncomfortable on 5.11-5.13 overhang walls.\n\nTo improve your footwork on overhangs, I would recommend considering a few things:\n\n* Try to rework your foot placement and body positioning to find a more comfortable stance. [1] mentions that the author \"reworked it after this\" to feel stronger.\n* Consider investing in climbing shoes with a more aggressive down-turned toe box or l",
+      "sources": [
+        "https://www.reddit.com/r/bouldering/comments/1kg4sig/how_did_i_do/",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.reddit.com/r/bouldering/comments/1rvtbtu/first_climb_im_proud_of_how_do_i_improve/",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer addresses footwork improvement on overhangs but includes irrelevant content about shoe discomfort.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The advice given is generally sound but not directly supported by the retrieved sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not specifically support the claims made in the answer.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers some techniques for improving footwork but lacks depth and specific strategies from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is partially relevant and accurate but lacks specific citations and depth in addressing the question."
+      }
+    },
+    {
+      "id": "T04",
+      "category": "training",
+      "query": "Tips for climbing slab routes?",
+      "answer": "A question about rock climbing!\n\nThe context provides several climbing-related topics, including (Un)Serious Climbing Gear Ideas, first-time outdoor climbing experiences, bouldering technique and training tips, and discussions on gear choice and technique for various climbing conditions.\n\nFor your question \"Tips for climbing slab routes?\", I'll combine insights from [4] and other relevant information. \n\nThe key takeaway is that technique trumps gear every time when it comes to slab climbing (as mentioned in [4]). For slab climbing, a comfortable, flexible shoe with good grip can make a big dif",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.reddit.com/r/climbing/comments/1jyd5aj/my_first_time_climbing_outdoors/",
+        "https://www.reddit.com/r/bouldering/comments/1rmplwp/advice_for_technique_and_training_tips/",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer addresses slab climbing tips but includes irrelevant content about unrelated climbing topics.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer mentions technique over gear and flexible shoes, which are reasonable but not directly supported by the sources.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not specifically support the claims made about slab climbing.",
+        "completeness": 3,
+        "completeness_reason": "The answer provides some useful tips but lacks depth and specific advice that could be found in the sources.",
+        "overall": 3,
+        "overall_reason": "The response is partially relevant and accurate but lacks specific citations and comprehensive coverage of slab climbing tips."
+      }
+    },
+    {
+      "id": "T05",
+      "category": "training",
+      "query": "How to prevent climbing injuries in fingers and elbows?",
+      "answer": "A great question!\n\nBased on the context, particularly [4], it's clear that preventing overuse injuries is crucial. The discussion highlights the importance of leaving enough time to recover between climbs and workouts to avoid Tennis Elbow and Golfer's Elbow.\n\nFor finger and elbow injuries prevention:\n\n1. **Leave enough recovery time**: Ensure you're not pushing yourself too hard, allowing your fingers and elbows to rest and recover between climbing sessions.\n2. **Warm up and cool down properly**: Before and after climbing, take the time to warm up with stretching exercises for your hands, arm",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about preventing climbing injuries in fingers and elbows.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The advice given is generally sound, but the specific claims about silicone rings and their role in preventing degloving injuries are not supported by the retrieved sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not provide specific URLs or content that directly supports the claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers key aspects of injury prevention such as recovery time and warm-up exercises, but lacks detailed support from the sources.",
+        "overall": 3,
+        "overall_reason": "While the response is relevant and mostly accurate, the lack of specific citations and unsupported claims about silicone rings reduce its overall quality."
+      }
+    },
+    {
+      "id": "T06",
+      "category": "training",
+      "query": "What is a good weekly training schedule for V5 bouldering?",
+      "answer": "Based on the provided context, I can see that there are some climbing-related questions and answers, as well as route information.\n\nTo answer your question about a good weekly training schedule for V5 bouldering, I'd like to draw from [3], which is a Reddit post asking for training advice. The OP (original poster) mentions they're currently climbing at the V5 level and are struggling to break into V6. They mention doing daily basics mobility, some bar work, and hangboard sessions.\n\nWhile this isn't a specific training schedule, it does give us an idea of the types of activities that might be h",
+      "sources": [
+        "https://openbeta.io/climb/8979c03a-ce86-57af-b958-c8912cd9581b",
+        "https://www.mountainproject.com/forum",
+        "https://www.reddit.com/r/bouldering/comments/1ri6sg2/training_advice/",
+        "https://openbeta.io/climb/a2d4ffc8-2386-5535-b5ec-e710deb5b52b",
+        "https://openbeta.io/climb/322a530a-eebc-5f97-9e1d-c1b1033377fc"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer is mostly relevant to the question about a training schedule for V5 bouldering, but it lacks specific details directly from the sources.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides a plausible training schedule, but it is not directly supported by the retrieved sources, which are not specific about training schedules.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The answer references a Reddit post but does not provide a specific URL or detailed citation that directly supports the training schedule provided.",
+        "completeness": 3,
+        "completeness_reason": "The answer gives a basic training schedule but lacks depth and specific advice that could be derived from more detailed sources.",
+        "overall": 3,
+        "overall_reason": "The response is generally relevant and provides a plausible training schedule, but it lacks direct support from the sources and could be more comprehensive."
+      }
+    },
+    {
+      "id": "T07",
+      "category": "training",
+      "query": "How do I build endurance for long multi-pitch routes?",
+      "answer": "A great question! Based on context [2], it seems you're interested in building endurance, which is a crucial aspect of multi-pitch climbing. To build endurance for long multi-pitch routes, I recommend incorporating training sessions that simulate the physical demands of your climbs.\n\nFor example, you can try doing multiple laps on your moonboard or hangboard to increase your finger strength and stamina [1]. Additionally, incorporate cardio exercises like hiking, jogging, or cycling to improve your overall cardiovascular endurance. \n\nIt's also essential to focus on your mental toughness by prac",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about building endurance for long multi-pitch routes.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The advice given is generally sound for building endurance, but there are no specific facts or claims that are directly supported by the retrieved sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations provided are generic and do not link to specific content that supports the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers various aspects of endurance training, including physical and mental preparation, but lacks specific details from the sources.",
+        "overall": 3,
+        "overall_reason": "While the response is relevant and provides a comprehensive overview of endurance training, it lacks specific citations and factual grounding from the retrieved sources."
+      }
+    },
+    {
+      "id": "T08",
+      "category": "training",
+      "query": "What stretches help with hip flexibility for climbing?",
+      "answer": "A question about rock climbing! As CruxBot, I'm happy to help.\n\nFrom the given context, it seems that you're looking for information on stretching exercises that can help improve hip flexibility for climbing. Unfortunately, none of the provided forum discussions explicitly mention stretches for hip flexibility specifically. However, we can draw some general insights from the discussions.\n\nIn [2], a user mentions that they prefer women's jeans with spandex for their climbing pants because they \"freakin' STRETCH,\" which implies that stretching is important for comfort and mobility while climbing",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer partially addresses the user's question by suggesting exercises for hip flexibility, but includes irrelevant content about clothing and fit.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The exercises mentioned are generally known to improve hip flexibility, but the answer lacks direct support from the retrieved sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The answer does not provide specific citations for the exercises mentioned, and the retrieved sources are generic forum links.",
+        "completeness": 3,
+        "completeness_reason": "The answer provides some exercises for hip flexibility but lacks comprehensive coverage and specific citations from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is partially relevant and accurate but lacks specific citations and includes some irrelevant content."
+      }
+    },
+    {
+      "id": "T09",
+      "category": "training",
+      "query": "How to overcome a climbing plateau at 5.11?",
+      "answer": "I can answer that!\n\nBased on the provided context, it seems like you're looking for advice on how to overcome a climbing plateau at 5.11. From [1], I see that someone recommended focusing on becoming a better climber rather than just trying to get stronger. This suggests that plateaus might be due to a lack of proper training or technique.\n\nIn [3], another user shared their experience of improving their climbing skills without formal training, by reading about different climbing styles and gradually increasing the difficulty of climbs. They also emphasized the importance of learning good style",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.reddit.com/r/bouldering/comments/1r11lur/follow_up_beta_completed/",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about overcoming a climbing plateau at 5.11.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer is mostly accurate and grounded in the sources, but some advice is generalized and not directly cited.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citations are somewhat generic and do not directly link to specific advice mentioned in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers several strategies for overcoming a plateau, but could include more specific techniques or examples from the sources.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and mostly accurate, but could improve in citation specificity and completeness."
+      }
+    },
+    {
+      "id": "T10",
+      "category": "training",
+      "query": "Should I campus board as a beginner?",
+      "answer": "A climbing-related question! As CruxBot, I'm happy to help.\n\nBased on your context, specifically topics [2] and [4], it seems you're familiar with campus boards and their uses. Now, about your question: \"Should I campus board as a beginner?\"\n\nIn general, it's recommended that beginners start with proper training methods, such as hangboards (e.g., Beastmaker) or campus boards designed for beginners. Campus boards can be an excellent way to develop finger strength, technique, and overall climbing proficiency.\n\nHowever, as a beginner, it's essential to focus on proper form and technique before mo",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about whether a beginner should use a campus board.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides reasonable advice, but there are no specific facts or claims directly supported by the retrieved sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not provide specific information to support the claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the main points about the risks and benefits of campus boarding for beginners, but lacks specific source-backed details.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and provides a good overview, but lacks specific citations and source-backed details to fully support its claims."
+      }
+    },
+    {
+      "id": "S01",
+      "category": "safety",
+      "query": "What are the most common lead climbing accidents?",
+      "answer": "Based on the provided articles [1], [2], and [5], I can answer that the most common lead climbing accidents involve:\n\n* Failure to place protection or inadequate protection (mentioned in Article [1] as a contributory cause for 27 accidents)\n* Protection pulling out, resulting in falls from moderate distances (6 meters or less) with injuries occurring due to impact (Article [2])\n* Lack of proper lowering techniques and equipment, including issues such as:\n\t+ Ropes being too short\n\t+ Miscommunication between belayer and climber\n\t+ Inadequate belay technique\n\t+ Anchor failure\n\nPlease note that th",
+      "sources": [
+        "https://publications.americanalpineclub.org/articles/13201213455",
+        "https://publications.americanalpineclub.org/articles/13199005200",
+        "https://publications.americanalpineclub.org/articles/13201212427",
+        "https://publications.americanalpineclub.org/articles/13198407000",
+        "https://publications.americanalpineclub.org/articles/13199104401"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about common lead climbing accidents.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer is mostly accurate but lacks specific details from the sources to fully verify each point.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citations are generic and do not directly link to the specific claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers several common types of lead climbing accidents but could include more details from the sources.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and mostly accurate but could improve in citation specificity and completeness."
+      }
+    },
+    {
+      "id": "S02",
+      "category": "safety",
+      "query": "How do I safely clean a sport climbing anchor?",
+      "answer": "Based on the provided context, specifically [2], it is crucial to remember that when cleaning a sport climbing anchor, never disconnect from your belayer. This ensures that falls such as the one mentioned in the article will not occur.\n\nAdditionally, [4] emphasizes the importance of staying on belay while cleaning the anchor. This is likely referring to the same principle as [2], where the climber remains connected to their belayer throughout the cleaning process.\n\nTo summarize, the key to safely cleaning a sport climbing anchor is to never go off belay (stay connected to your belayer) and fol",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://publications.americanalpineclub.org/articles/13200807002",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about safely cleaning a sport climbing anchor.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer is mostly accurate but lacks specific details from the sources to fully verify the claims.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not point to specific, useful content that supports the answer.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers the main point of staying on belay but lacks detailed steps or additional safety tips that might be in the sources.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and mostly accurate but lacks specific citations and completeness in terms of detailed guidance."
+      }
+    },
+    {
+      "id": "S03",
+      "category": "safety",
+      "query": "What causes rappelling accidents in climbing?",
+      "answer": "Based on the provided context, I can answer your question about what causes rappelling accidents in climbing.\n\nAccording to [1], which is a feature article from the American Alpine Club, the primary causes of rappelling incidents are:\n\n* Inadequate anchor systems or anchor failure\n* Inadequate backup for rappels\n* Rappelling off the end of the rope(s) due to uneven ropes\n\nAdditionally, other less common causes mentioned in [1] include:\n\n* Rappel device issues\n* Stranded due to inadequate rappel rope length\n* Harness/belay loop failure\n\nIt's also important to note that human error is often the ",
+      "sources": [
+        "https://publications.americanalpineclub.org/articles/13201200200",
+        "https://www.mountainproject.com/forum",
+        "https://publications.americanalpineclub.org/articles/13195200200",
+        "https://publications.americanalpineclub.org/articles/13199405102",
+        "https://publications.americanalpineclub.org/articles/13199600100"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about the causes of rappelling accidents in climbing.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer is mostly accurate, but it includes some generalizations and lacks specific details from the sources.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citations are somewhat generic and do not directly link to specific claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the main causes of rappelling accidents but could include more detailed information from the sources.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and mostly accurate, but the citation quality and completeness could be improved with more specific references and details."
+      }
+    },
+    {
+      "id": "S04",
+      "category": "safety",
+      "query": "How to avoid rockfall injuries while climbing outdoors?",
+      "answer": "As CruxBot, I've analyzed the provided context and found relevant information about rock climbing.\n\nTo answer your question about avoiding rockfall injuries while climbing outdoors:\n\nThe importance of wearing a helmet is emphasized in posts [1] and [3]. The first poster mentions that helmets have saved their jaw multiple times while skiing, implying that they also wear one while climbing. The second poster highlights the concern for hitting their head in a fall and the added protection from rockfall. The general consensus seems to be that wearing a helmet is crucial for outdoor climbing.\n\nAddi",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about avoiding rockfall injuries while climbing outdoors.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer is mostly accurate but includes a suggestion about harness life that is not directly related to rockfall injuries.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not link to specific posts or discussions, making them unhelpful.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers several important aspects of avoiding rockfall injuries but could include more detailed strategies if available in the sources.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and mostly accurate but lacks specific citations and could be more comprehensive."
+      }
+    },
+    {
+      "id": "S05",
+      "category": "safety",
+      "query": "What happened in climbing accidents at Red River Gorge?",
+      "answer": "I can help with that!\n\nAs a climbing assistant, I've reviewed the provided context, which includes information about various routes and locations within Red River Gorge, Kentucky. Since there is no specific mention of accidents or incidents related to climbing, I don't have any concrete data on climbing accidents at Red River Gorge.\n\nHowever, I can suggest some general tips for climbers to minimize risks and ensure a safe climbing experience:\n\n1. Always wear proper gear, including helmets, harnesses, and shoes.\n2. Inspect the route and surrounding area before starting your climb.\n3. Bring nece",
+      "sources": [
+        "https://www.mountainproject.com/route/105880966/new-red-river",
+        "https://www.mountainproject.com/route/108384240/weathertop-stings",
+        "https://www.mountainproject.com/route/106730381/close-to-the-edge-closed",
+        "https://openbeta.io/climb/1014949d-77a0-5077-920b-f0a35f15adba",
+        "https://www.mountainproject.com/route/105869528/all-cracked-up"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 3,
+        "relevance_reason": "The answer addresses the topic of climbing accidents but does not provide specific information about incidents at Red River Gorge.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The answer does not contradict the sources and provides general safety tips, which are accurate.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The answer does not use any of the retrieved sources to support its claims about accidents or safety tips.",
+        "completeness": 2,
+        "completeness_reason": "The answer lacks specific information about climbing accidents at Red River Gorge, which was the main focus of the query.",
+        "overall": 3,
+        "overall_reason": "While the response provides general safety advice, it fails to address the specific query about climbing accidents at Red River Gorge and does not utilize the retrieved sources."
+      }
+    },
+    {
+      "id": "S06",
+      "category": "safety",
+      "query": "How to tie a safe figure-eight knot?",
+      "answer": "A climbing-related question!\n\nAfter reviewing the provided context, I noticed that there are several discussions about knots and their uses in rock climbing. Based on these conversations, I can provide information on tying a safe figure-eight knot.\n\nFrom the discussion [2], we see that the Figure 8 tie-in is a commonly used knot for connecting to a rope. To tie a safe figure-eight knot, you would:\n\n1. Thread the rope through your harness.\n2. Feed the rope back through the knot, starting with the part of the knot closest to the harness and finishing with the running end of the rope going away f",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about tying a safe figure-eight knot.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides a basic description of tying a figure-eight knot, but lacks detailed steps and does not directly cite specific instructions from the sources.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not point to specific discussions or instructions about tying a figure-eight knot.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers the basic steps but lacks detailed instructions and verification from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and partially accurate but lacks specific citations and detailed instructions, reducing its overall effectiveness."
+      }
+    },
+    {
+      "id": "S07",
+      "category": "safety",
+      "query": "What are common belaying mistakes that lead to accidents?",
+      "answer": "I can help you with that! According to the American Alpine Club, common belaying mistakes that lead to accidents include [1]:\n\n* Inadequate anchor systems or anchor failure\n* Inadequate backup for rappels\n* Rappelling off the end of the rope(s) due to uneven ropes\n* Less common causes: Rappel device issues, Stranded due to inadequate rappel rope length, Harness/belay loop failure\n\nAdditionally, [2] emphasizes the importance of preventing lowering accidents by taking simple steps:\n\n1. Make a plan and communicate it with your belayer.\n2. Tie a stopper knot in the belayer's end of the rope or tie",
+      "sources": [
+        "https://publications.americanalpineclub.org/articles/13201200200",
+        "https://publications.americanalpineclub.org/articles/13201214710",
+        "https://publications.americanalpineclub.org/articles/13201216254",
+        "https://publications.americanalpineclub.org/articles/13198407000",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about common belaying mistakes that lead to accidents.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The answer is consistent with the retrieved sources and does not contradict any provided information.",
+        "citation_quality": 5,
+        "citation_quality_reason": "The answer includes specific citations that are relevant and match the content discussed.",
+        "completeness": 5,
+        "completeness_reason": "The answer comprehensively covers the common belaying mistakes and provides additional preventive measures.",
+        "overall": 5,
+        "overall_reason": "The response is fully relevant, accurate, well-cited, and complete, addressing the user's query comprehensively."
+      }
+    },
+    {
+      "id": "S08",
+      "category": "safety",
+      "query": "Fatal climbing accidents caused by equipment failure",
+      "answer": "I have data on this in my climbing knowledge base.\n\nAccording to [2], Equipment Failure is often recorded as a contributory cause of climbing accidents. However, the article highlights that when pitons break, webbing parts, ropes sever, and so forth, the fault has generally been either from the age of the material or the manner in which it was used.\n\nUnfortunately, there isn't specific information about fatal climbing accidents caused by equipment failure in this particular context. However, I can provide general information on climbing accidents and equipment failures.\n\nAccording to [3], equi",
+      "sources": [
+        "https://publications.americanalpineclub.org/articles/13198705201",
+        "https://publications.americanalpineclub.org/articles/13199200100",
+        "https://publications.americanalpineclub.org/articles/13201213455",
+        "https://publications.americanalpineclub.org/articles/13195900100",
+        "https://publications.americanalpineclub.org/articles/13199904701"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the topic of climbing accidents caused by equipment failure, but lacks specific data on fatal accidents.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer is mostly accurate with the retrieved sources, but it makes some generalizations without specific backing from the sources.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citations are somewhat specific but not directly linked to the claims made about fatal accidents.",
+        "completeness": 3,
+        "completeness_reason": "The answer provides a general overview but lacks specific details on fatal accidents caused by equipment failure.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and mostly accurate but lacks specific details and precise citations for fatal accidents caused by equipment failure."
+      }
+    },
+    {
+      "id": "S09",
+      "category": "safety",
+      "query": "How dangerous is free soloing?",
+      "answer": "Based on the context, I can confidently answer your question about free soloing.\n\nAccording to [2], which describes an incident where someone fell while free soloing and was lucky to have been stabilized by a rescuer, free soloing is inherently dangerous. The article states that there's no room for error, even for the most talented and experienced soloists.\n\nAdditionally, in [3], one user shares their personal experience of not being influenced to take risks due to the movie Free Solo, stating that \"THAT SHIT IS SCARY...unless you have trained body and mind to be in control when you are a foot",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://publications.americanalpineclub.org/articles/13201215633",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the question about the dangers of free soloing.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer accurately reflects the retrieved sources, but the specific details from the sources are not fully verified due to lack of direct quotes.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citations are somewhat generic, pointing to forums rather than specific posts or articles.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the main points about the dangers of free soloing but could include more specific examples or statistics if available.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and mostly accurate, but the citation quality and completeness could be improved with more specific references and details."
+      }
+    },
+    {
+      "id": "S10",
+      "category": "safety",
+      "query": "What should I do if my climbing partner falls and is injured?",
+      "answer": "Based on the provided context, I'd like to provide an answer to your question.\n\nIf your climbing partner falls and is injured, it's essential to prioritize their safety and well-being. Here are some steps you can take:\n\n1. **Check for injuries**: Assess your partner's condition as quickly and carefully as possible. Look for signs of serious injury, such as difficulty breathing, severe bleeding, or loss of consciousness.\n2. **Call for help (if necessary)**: If the injury is severe or life-threatening, call for emergency assistance. In this case, you can use your cell phone to call 911 (as menti",
+      "sources": [
+        "https://publications.americanalpineclub.org/articles/13200406800",
+        "https://www.mountainproject.com/forum",
+        "https://publications.americanalpineclub.org/articles/13201216225",
+        "https://www.mountainproject.com/forum",
+        "https://publications.americanalpineclub.org/articles/13198506202"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about what to do if a climbing partner falls and is injured.",
+        "factual_accuracy": 4,
+        "factual_accuracy_reason": "The answer is mostly accurate, but it lacks specific details from the sources to fully verify all steps mentioned.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The citations are somewhat relevant but not specific to the content of the answer, and one citation number is incorrect.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the main steps to take in the event of a climbing accident, but could include more detailed information from the sources.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and mostly accurate, but the citation quality and completeness could be improved with more specific references and details."
+      }
+    },
+    {
+      "id": "G01",
+      "category": "gear",
+      "query": "What is the best belay device for multi-pitch climbing?",
+      "answer": "Based on the context, it's clear that the conversation revolves around belay devices and multi-pitch climbing. Here's a summary of the relevant information:\n\n* The GriGri+ is designed for multi-pitch climbing [1].\n* Reverso and ATC Guide are mentioned as options to consider [2].\n* The Mammut Bionic has the lowest friction in guide mode among tube-style devices, while the Gigajul offers maximum versatility [3].\n* The Gigi/Grigri setup is recommended for short multi-pitch climbs with single ropes [3].\n* The Metolius harness features two belay loops for multi-pitch climbing [4], which requires ex",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the question about the best belay device for multi-pitch climbing.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides a reasonable summary of options but lacks specific grounding in the retrieved sources, which are not detailed.",
+        "citation_quality": 1,
+        "citation_quality_reason": "All citations are generic and do not provide specific, clickable links to support the claims made.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers a range of options and considerations for multi-pitch belay devices but could be more detailed with specific source information.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and covers the topic well, but lacks specific citations and detailed grounding in the sources."
+      }
+    },
+    {
+      "id": "G02",
+      "category": "gear",
+      "query": "La Sportiva vs Scarpa climbing shoes comparison",
+      "answer": "A question about climbing shoes! I'd be happy to help.\n\nBased on the provided context, it seems that both La Sportiva and Scarpa offer a range of climbing shoes with varying sizes and styles. Here's what we can gather from the discussions:\n\n* Both brands have wide and narrow versions of their shoes, so it's essential to try them on to find the best fit for your foot.\n* The Skwama (La Sportiva) and Instinct VS (Scarpa) are mentioned as options for aggressive climbing shoes.\n* For bouldering, the Miura VS (La Sportiva) or Vapor V (Scarpa) might be suitable for \"duck feet\" (whatever that means!).",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the comparison between La Sportiva and Scarpa climbing shoes, mentioning specific models and their uses.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides some accurate information, but it lacks specific details from the sources to fully verify the claims.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not link to specific discussions or reviews that support the claims made in the answer.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers some key points about the brands and models but lacks depth and specific comparisons that could be derived from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and partially accurate but lacks specific citations and depth, making it an average answer."
+      }
+    },
+    {
+      "id": "G03",
+      "category": "gear",
+      "query": "What climbing rope should I buy for sport climbing?",
+      "answer": "I'd be happy to help you with that! Based on the context, it seems like you're looking for recommendations on which rope to buy for sport climbing.\n\nFrom the discussions in [2], [3], and [5], it appears that the main concerns are durability, price, and performance. Some popular options mentioned include Petzl, Black Diamond, and Mammut ropes.\n\nFor a beginner climber looking to buy their own rope for outdoor top-rope and sport climbing, I would recommend considering a few key factors:\n\n1. Length: Since you mentioned you're looking at 60-70m single ropes, that's a good starting point.\n2. Durabil",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer is mostly relevant, addressing the user's question about which climbing rope to buy for sport climbing, but it includes some general advice not directly tied to the sources.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides general advice that is likely accurate, but it lacks specific grounding in the retrieved sources, which are not detailed in the response.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not link to specific content that supports the claims made in the answer.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers the main points about rope selection but lacks specific details from the sources that could enhance the response.",
+        "overall": 3,
+        "overall_reason": "The response is generally helpful and relevant but lacks specific citations and detailed grounding in the retrieved sources."
+      }
+    },
+    {
+      "id": "G04",
+      "category": "gear",
+      "query": "Best harness for beginners?",
+      "answer": "I've got some valuable information for you!\n\nBased on the context, specifically [3] and [4], I can provide some insights. While there isn't a single \"best\" harness recommended, some popular options mentioned include:\n\n* Black Diamond (BD) Momentum Harness (mentioned in [5] as a relatively cheap option for beginners)\n* Petzl\n* Arcteryx\n* Mammut\n\nThese brands are well-known and respected in the climbing community. However, it's essential to consider factors like fit, comfort, and functionality when choosing a harness.\n\nFor beginners, renting equipment at the gym is also an excellent idea (as men",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about the best harness for beginners.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer mentions specific harness brands and advice, but the retrieved sources do not provide specific details to verify these claims.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not link to specific content that supports the claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer provides a good overview of considerations for beginners choosing a harness, but lacks specific source-backed details.",
+        "overall": 3,
+        "overall_reason": "While the answer is relevant and provides useful advice, it lacks specific citations and verifiable details from the sources."
+      }
+    },
+    {
+      "id": "G05",
+      "category": "gear",
+      "query": "Review of Black Diamond ATC Guide belay device",
+      "answer": "I can answer this question!\n\nBased on the provided context, there is a gear review for the Black Diamond ATC-Guide belay device on trailspace.com with a rating of 5.0/5. According to this review, the ATC-Guide is a lightweight and nice evolution from the ATC. It allows for direct belaying off anchors, which helps in keeping the second safe. Additionally, it's easy to incorporate into the anchor system and easy to rappel from single or double line rappels.\n\nSource: [5] Trailspace.com - Gear Review - Black Diamond atc-guide (rated 5.0/5)",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.trailspace.com/"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's request for a review of the Black Diamond ATC Guide belay device.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides a review and rating, but the specific details about the device's features are not directly supported by the retrieved sources.",
+        "citation_quality": 3,
+        "citation_quality_reason": "The answer cites a specific source, but the URL provided is generic and not directly linked to the review mentioned.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the main aspects of the review, including the rating and key features, but lacks direct evidence from the sources.",
+        "overall": 4,
+        "overall_reason": "The response is relevant and mostly complete, but the factual accuracy and citation quality are limited by the lack of direct support from the retrieved sources."
+      }
+    },
+    {
+      "id": "G06",
+      "category": "gear",
+      "query": "What helmet should I use for outdoor climbing?",
+      "answer": "A great question about rock climbing!\n\nBased on the provided context, it's clear that you're looking for a recommendation on a climbing helmet that fits your budget and meets your needs. From the discussions, I can see that some users have successfully used their tree work helmets (like the Pfanner Protos Arborist) for climbing, but others recommend getting a dedicated rock climbing helmet.\n\nIn general, it's not recommended to use a bike helmet for climbing, as they may not provide adequate protection in case of a fall. Climbing helmets are specifically designed to absorb impact and protect yo",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the user's question about choosing a helmet for outdoor climbing, providing relevant considerations and recommendations.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides general advice consistent with climbing helmet standards, but specific helmet recommendations like the CamelBak Commander are not supported by the sources.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not directly support the specific helmet recommendations or details provided in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers important factors to consider when choosing a climbing helmet and provides several recommendations, though some are unsupported.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and mostly accurate but lacks specific citations to support all claims, particularly the helmet recommendations."
+      }
+    },
+    {
+      "id": "G07",
+      "category": "gear",
+      "query": "Best chalk bag for bouldering?",
+      "answer": "A question about chalk bags! Let's dive into the conversation and find some recommendations!\n\nFrom the context, we can see that users have mentioned a few different options:\n\n1. Fish's White Lung Chalk Bag - a large bag that holds a lot of chalk (source [1]).\n2. Mammut Impact - works well for one user (source [3]).\n3. Arc'teryx Chalk Bags - praised for their durable and stiff top circle, allowing for easy access to chalk without annoying material getting in the way (source [4]).\n4. Misty Mountain Max Chalk Bag - a large bag that seems to work well for someone with larger hands (source [5]).\n\nF",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer is mostly relevant, providing specific chalk bag recommendations for bouldering, but includes some general advice not directly supported by sources.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The recommendations are plausible, but the answer includes some unsupported claims about chalk texture and dispenser design.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not link to specific discussions or reviews, reducing their usefulness.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers several options but lacks depth in discussing features specific to bouldering, such as closure systems or chalk capacity.",
+        "overall": 3,
+        "overall_reason": "The response provides some useful recommendations but lacks specific citations and detailed information directly from the sources."
+      }
+    },
+    {
+      "id": "G08",
+      "category": "gear",
+      "query": "How to choose quickdraws for sport climbing?",
+      "answer": "Based on the provided context, I'd recommend choosing quickdraws specifically designed for sport climbing. For entry-level climbers, it's essential to get a set that is reliable, easy to use, and suitable for sport climbing.\n\nFrom [2], we can infer that having enough quickdraws is crucial for sport climbing, as you never know when you might need an extra one. It's also important to consider the type of holds and terrain you'll be climbing on, as mentioned in [3]. For example, if you're climbing a route with creaky and solid holds, you may want to look for quickdraws that can accommodate such f",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/route/110918254/polish-power",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/route/116079928/perverted-picasso"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the question of choosing quickdraws for sport climbing, but includes some irrelevant details about trad climbing.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides general advice consistent with common climbing knowledge, but the specific quickdraw recommendations are not supported by the sources.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not specifically support the claims made about quickdraws or their features.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers the basics of choosing quickdraws but lacks depth and specific advice that could be derived from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is generally relevant and somewhat accurate but lacks specific citations and depth, making it moderately useful."
+      }
+    },
+    {
+      "id": "G09",
+      "category": "gear",
+      "query": "What crash pad should I buy for outdoor bouldering?",
+      "answer": "Based on the provided context, here are some recommendations for a good crash pad for outdoor bouldering:\n\nFrom [1], Asana Bouldering pads are mentioned as a popular option, with their Hero Pad being discounted at 30% off.\n\nIn [2], it's asked what's more important: helmet or crash pad? While both are crucial, a crash pad is essential for safety in outdoor bouldering. Cheaper options for crash pads are also discussed.\n\n[3] provides some general suggestions for finding a first bouldering crash pad on a budget of $150. The poster wants an easier-to-lug-around pad, which could indicate a smaller o",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 4,
+        "relevance_reason": "The answer addresses the user's question by providing recommendations for crash pads, which is directly relevant to the query.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides some accurate information, but it lacks specific details from the sources to fully verify the claims.",
+        "citation_quality": 2,
+        "citation_quality_reason": "The citations are generic and do not link to specific content, making it difficult to verify the information provided.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers various options for crash pads, including budget and DIY options, but could be more detailed with specific product features.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and covers multiple aspects of the query, but lacks specific citations and detailed factual grounding."
+      }
+    },
+    {
+      "id": "G10",
+      "category": "gear",
+      "query": "Are assisted braking belay devices safer than tube style?",
+      "answer": "Based on the provided context, I'll analyze the discussions and provide an answer.\n\nThe main concern is that assisted braking belay devices can have unpredictable failure modes, which might not decrease with experience. In fact, some users suggest that experienced climbers using assisted braking devices might be more likely to suffer a catastrophic belay failure than those using tube devices. This is because the technology's failure modes are less understood and more prone to unexpected occurrences.\n\nOne user mentions that even if you always add a braking force to the rope with an assisted dev",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": false,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The answer directly addresses the user's question about the safety of assisted braking belay devices compared to tube style devices.",
+        "factual_accuracy": 3,
+        "factual_accuracy_reason": "The answer provides a balanced view but lacks specific details from the sources to support claims about failure modes and the role of experience.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations are generic and do not link to specific discussions or evidence supporting the claims made in the answer.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the main points about the safety considerations of both device types but could include more specific examples or data from the sources.",
+        "overall": 3,
+        "overall_reason": "The response is relevant and covers the topic well, but it lacks specific citations and detailed evidence from the sources to fully support its claims."
+      }
+    },
+    {
+      "id": "H01",
+      "category": "hallucination",
+      "query": "What is the best restaurant near Yosemite Valley?",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://openbeta.io/climb/658fd7d5-f945-5fc3-8153-3ff24b882c28",
+        "https://www.mountainproject.com/route/108020120/oak-tree-crack",
+        "https://openbeta.io/climb/7543be4c-fdd7-5275-b0bc-f948649cf4ff",
+        "https://www.mountainproject.com/route/112941915/survivor",
+        "https://www.mountainproject.com/route/110883952/explore-yosemite"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide information on restaurants.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response is a refusal.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by correctly refusing to answer.",
+        "overall": 5,
+        "overall_reason": "The response correctly refuses to answer a non-climbing related query, which is appropriate for the context."
+      }
+    },
+    {
+      "id": "H02",
+      "category": "hallucination",
+      "query": "Who won the 2024 NBA finals?",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.reddit.com/r/bouldering/comments/oza525/brooke_raboutou_tries_to_beat_the_clock_on_b2/",
+        "https://www.reddit.com/r/bouldering/comments/un10tc/finals_boulder_from_sbc/",
+        "https://www.reddit.com/r/bouldering/comments/byzzng/its_a_clean_sweep_janja_garnbret_slo_wins_her/",
+        "https://www.reddit.com/r/bouldering/comments/1oh1tao/adam_ondra_crushing_at_the_2025_world/",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide information on the NBA finals.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response correctly refuses to answer an out-of-domain question.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by refusing to provide information outside its domain.",
+        "overall": 5,
+        "overall_reason": "The response correctly refuses to answer a non-climbing related question, adhering to the anti-hallucination guideline."
+      }
+    },
+    {
+      "id": "H03",
+      "category": "hallucination",
+      "query": "How do I fix a bug in my Python code?",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide information on the topic.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response is a refusal.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by correctly refusing to answer.",
+        "overall": 5,
+        "overall_reason": "The response is appropriate and correct for an anti-hallucination query."
+      }
+    },
+    {
+      "id": "H04",
+      "category": "hallucination",
+      "query": "What is the weather forecast for tomorrow in New York?",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://publications.americanalpineclub.org/articles/13201214794",
+        "https://publications.americanalpineclub.org/articles/13201215677",
+        "https://openbeta.io/climb/c0449976-e328-5919-ab37-16259bcf3bed",
+        "https://www.mountainproject.com/forum",
+        "https://publications.americanalpineclub.org/articles/12197130300"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide weather information.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response is a refusal.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by correctly refusing to answer.",
+        "overall": 5,
+        "overall_reason": "The response is appropriate and correct for an anti-hallucination query."
+      }
+    },
+    {
+      "id": "H05",
+      "category": "hallucination",
+      "query": "Recommend a good hotel in Las Vegas",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide information on hotels in Las Vegas.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response is a refusal based on the domain limitation.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by correctly refusing to provide information outside its domain.",
+        "overall": 5,
+        "overall_reason": "The response is appropriate and correct for an anti-hallucination query, as it refuses to provide information outside the climbing domain."
+      }
+    },
+    {
+      "id": "H06",
+      "category": "hallucination",
+      "query": "What climbing routes are on Mars?",
+      "answer": "A question about rock climbing!\n\nBased on the provided context, I found several routes related to \"Mars\":\n\n1. **Mars Traverse** (V5, Colorado > Fort Collins > Carter Lake > Mars Boulder) [1]\n2. **Mars Traverse** (V4, Colorado > Telluride/Norwood area > Society Turn) [2]\n3. **Mars Rover** (5.6 Sport climbing, Martian Slabs Peshastin Pinnacles State Park Central-East Cascades, Wenatchee, & Leavenworth Washington) [3]\n4. **Martian Route** (5.8 Sport climbing, East Face - 2nd Tier Keyhole Rock Garden of the Gods Colorado Springs Colorado) [4]\n5. **Mars Landing** (V3 bouldering/alpine, Colorado > I",
+      "sources": [
+        "https://openbeta.io/climb/9aeafe3e-27bb-5b70-9a8f-d39e47198831",
+        "https://openbeta.io/climb/066c6742-4830-5813-ab86-da23d0544596",
+        "https://www.mountainproject.com/route/119049233/mars-rover",
+        "https://www.mountainproject.com/route/105813992/martian-route",
+        "https://openbeta.io/climb/7e1cd847-6fd7-5f66-b1f3-8252989ea1d6"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 1,
+        "relevance_reason": "The answer provides information about climbing routes on Earth with 'Mars' in their names, rather than addressing the query about climbing routes on the planet Mars.",
+        "factual_accuracy": 1,
+        "factual_accuracy_reason": "The answer incorrectly interprets the query and provides irrelevant information about Earth-based climbing routes.",
+        "citation_quality": 1,
+        "citation_quality_reason": "The citations provided are irrelevant to the query about Mars, as they pertain to Earth-based climbing routes.",
+        "completeness": 1,
+        "completeness_reason": "The answer fails to address the query about climbing routes on Mars, which is outside the scope of current human activity.",
+        "overall": 1,
+        "overall_reason": "The response fails to recognize the query as outside the climbing domain and provides irrelevant information about Earth-based routes."
+      }
+    },
+    {
+      "id": "H07",
+      "category": "hallucination",
+      "query": "Tell me about the history of the Roman Empire",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://openbeta.io/climb/cab9ee1d-3b7b-5453-a48d-0009eae650de",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide information on the Roman Empire.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response correctly refuses to answer an out-of-domain question.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by correctly refusing to provide information outside its domain.",
+        "overall": 5,
+        "overall_reason": "The response is appropriate and correct for an anti-hallucination query, as it refuses to answer a non-climbing related question."
+      }
+    },
+    {
+      "id": "H08",
+      "category": "hallucination",
+      "query": "What is the stock price of Apple today?",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/route/113551473/apple",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide stock price information.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response correctly refuses to answer the non-climbing query.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by refusing to provide non-climbing information.",
+        "overall": 5,
+        "overall_reason": "The response correctly refuses to answer a non-climbing related query, adhering to the domain limitations."
+      }
+    },
+    {
+      "id": "H09",
+      "category": "hallucination",
+      "query": "How to cook a perfect steak?",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the climbing domain.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it cannot provide information on cooking a steak.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response correctly refuses to answer the off-topic query.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by refusing to provide information outside its domain.",
+        "overall": 5,
+        "overall_reason": "The response correctly refuses to answer a non-climbing related question, adhering to the anti-hallucination guideline."
+      }
+    },
+    {
+      "id": "H10",
+      "category": "hallucination",
+      "query": "Recommend climbing routes on Mount Everest summit ridge",
+      "answer": "I don't have data on this in my climbing knowledge base. I can only answer questions about rock climbing.",
+      "sources": [
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum",
+        "https://www.mountainproject.com/forum"
+      ],
+      "expect_hallucination": true,
+      "scores": {
+        "relevance": 5,
+        "relevance_reason": "The response correctly identifies that the query is outside the scope of rock climbing and refuses to answer.",
+        "factual_accuracy": 5,
+        "factual_accuracy_reason": "The response accurately states that it does not have data on Mount Everest summit ridge climbing routes.",
+        "citation_quality": 5,
+        "citation_quality_reason": "No citations are needed as the response is a refusal, which is appropriate for the query.",
+        "completeness": 5,
+        "completeness_reason": "The response fully addresses the query by correctly refusing to provide information outside its domain.",
+        "overall": 5,
+        "overall_reason": "The response is appropriate and correct for an anti-hallucination test, as it refuses to provide information outside the climbing domain."
+      }
+    }
+  ]
+}
